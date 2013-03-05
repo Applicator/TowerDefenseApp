@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35BF13A1-EB75-4954-94B2-FB50CCD0D969}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TowerDefense</RootNamespace>
+    <AssemblyName>TowerDefense</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TowerDefense.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.OpenGl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1ca010269a4501ef">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tao OpenGL\tao\Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl.Glu">
+      <HintPath>..\..\..\Tao OpenGL\tao\Tao.OpenGl.Glu.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Platform.Windows">
+      <HintPath>..\..\..\Tao OpenGL\tao\Tao.Platform.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameBoard.cs" />
+    <Compile Include="GraphicsUtilities.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="SquareArea.cs" />
+    <Compile Include="Tower.cs" />
+    <Compile Include="TowerDefenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TowerDefenseForm.Designer.cs">
+      <DependentUpon>TowerDefenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TowerSelectionPanel.cs" />
+    <Compile Include="Towers\BasicShootingTower.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TowerDefenseForm.resx">
+      <DependentUpon>TowerDefenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Beetle\Comp 1_00000.png" />
+    <Content Include="Beetle\Comp 1_00001.png" />
+    <Content Include="Beetle\Comp 1_00002.png" />
+    <Content Include="Beetle\Comp 1_00003.png" />
+    <Content Include="Beetle\Comp 1_00004.png" />
+    <Content Include="Beetle\Comp 1_00005.png" />
+    <Content Include="Beetle\Comp 1_00006.png" />
+    <Content Include="Beetle\Comp 1_00007.png" />
+    <Content Include="Beetle\Comp 1_00008.png" />
+    <Content Include="Beetle\Comp 1_00009.png" />
+    <Content Include="Beetle\Comp 1_00010.png" />
+    <Content Include="Beetle\Comp 1_00011.png" />
+    <Content Include="Beetle\Comp 1_00012.png" />
+    <Content Include="Beetle\Comp 1_00013.png" />
+    <Content Include="Beetle\Comp 1_00014.png" />
+    <Content Include="Beetle\Comp 1_00015.png" />
+    <Content Include="Beetle\Comp 1_00016.png" />
+    <Content Include="Beetle\Comp 1_00017.png" />
+    <Content Include="Beetle\Comp 1_00018.png" />
+    <Content Include="Beetle\Comp 1_00019.png" />
+    <Content Include="Beetle\Comp 1_00020.png" />
+    <Content Include="Beetle\Comp 1_00021.png" />
+    <Content Include="Beetle\Comp 1_00022.png" />
+    <Content Include="Beetle\Comp 1_00023.png" />
+    <Content Include="Beetle\Comp 1_00024.png" />
+    <Content Include="Beetle\Comp 1_00025.png" />
+    <Content Include="Beetle\Comp 1_00026.png" />
+    <Content Include="Beetle\Comp 1_00027.png" />
+    <Content Include="Beetle\Comp 1_00028.png" />
+    <Content Include="Beetle\Comp 1_00029.png" />
+    <Content Include="Beetle\Comp 1_00030.png" />
+    <Content Include="Beetle\Comp 1_00031.png" />
+    <Content Include="Beetle\Comp 1_00032.png" />
+    <Content Include="Beetle\Comp 1_00033.png" />
+    <Content Include="Beetle\Comp 1_00034.png" />
+    <Content Include="Beetle\Comp 1_00035.png" />
+    <Content Include="Beetle\Comp 1_00036.png" />
+    <Content Include="Beetle\Comp 1_00037.png" />
+    <Content Include="Beetle\Comp 1_00038.png" />
+    <Content Include="Beetle\Comp 1_00039.png" />
+    <Content Include="Beetle\Comp 1_00040.png" />
+    <Content Include="Beetle\Comp 1_00041.png" />
+    <Content Include="Beetle\Comp 1_00042.png" />
+    <Content Include="Beetle\Comp 1_00043.png" />
+    <Content Include="Beetle\Comp 1_00044.png" />
+    <Content Include="Beetle\Comp 1_00045.png" />
+    <Content Include="Beetle\Comp 1_00046.png" />
+    <Content Include="Beetle\Comp 1_00047.png" />
+    <Content Include="Beetle\Comp 1_00048.png" />
+    <Content Include="Beetle\Comp 1_00049.png" />
+    <Content Include="Beetle\Comp 1_00050.png" />
+    <Content Include="Beetle\Comp 1_00051.png" />
+    <Content Include="Beetle\Comp 1_00052.png" />
+    <Content Include="Beetle\Comp 1_00053.png" />
+    <Content Include="Beetle\Comp 1_00054.png" />
+    <Content Include="Beetle\Comp 1_00055.png" />
+    <Content Include="Beetle\Comp 1_00056.png" />
+    <Content Include="Beetle\Comp 1_00057.png" />
+    <Content Include="Beetle\Comp 1_00058.png" />
+    <Content Include="Beetle\Comp 1_00059.png" />
+    <Content Include="Beetle\Comp 1_00060.png" />
+    <Content Include="Beetle\Comp 1_00061.png" />
+    <Content Include="Beetle\Comp 1_00062.png" />
+    <Content Include="Beetle\Comp 1_00063.png" />
+    <Content Include="Beetle\Comp 1_00064.png" />
+    <Content Include="Beetle\Comp 1_00065.png" />
+    <Content Include="Beetle\Comp 1_00066.png" />
+    <Content Include="Beetle\Comp 1_00067.png" />
+    <Content Include="Beetle\Comp 1_00068.png" />
+    <Content Include="Beetle\Comp 1_00069.png" />
+    <Content Include="Beetle\Comp 1_00070.png" />
+    <Content Include="Beetle\Comp 1_00071.png" />
+    <Content Include="Beetle\Comp 1_00072.png" />
+    <Content Include="Beetle\Comp 1_00073.png" />
+    <Content Include="Beetle\Comp 1_00074.png" />
+    <Content Include="Beetle\Comp 1_00075.png" />
+    <Content Include="Beetle\Comp 1_00076.png" />
+    <Content Include="Beetle\Comp 1_00077.png" />
+    <Content Include="Beetle\Comp 1_00078.png" />
+    <Content Include="Beetle\Comp 1_00079.png" />
+    <Content Include="Beetle\Comp 1_00080.png" />
+    <Content Include="Beetle\Comp 1_00081.png" />
+    <Content Include="Beetle\Comp 1_00082.png" />
+    <Content Include="Beetle\Comp 1_00083.png" />
+    <Content Include="Beetle\Comp 1_00084.png" />
+    <Content Include="Beetle\Comp 1_00085.png" />
+    <Content Include="Beetle\Comp 1_00086.png" />
+    <Content Include="Beetle\Comp 1_00087.png" />
+    <Content Include="Beetle\Comp 1_00088.png" />
+    <Content Include="Beetle\Comp 1_00089.png" />
+    <Content Include="Beetle\Comp 1_00090.png" />
+    <Content Include="Beetle\Comp 1_00091.png" />
+    <Content Include="Beetle\Comp 1_00092.png" />
+    <Content Include="Beetle\Comp 1_00093.png" />
+    <Content Include="Beetle\Comp 1_00094.png" />
+    <Content Include="Beetle\Comp 1_00095.png" />
+    <Content Include="Beetle\Comp 1_00096.png" />
+    <Content Include="Beetle\Comp 1_00097.png" />
+    <Content Include="Beetle\Comp 1_00098.png" />
+    <Content Include="Beetle\Comp 1_00099.png" />
+    <Content Include="Beetle\Comp 1_00100.png" />
+    <Content Include="Beetle\Comp 1_00101.png" />
+    <Content Include="Beetle\Comp 1_00102.png" />
+    <Content Include="Beetle\Comp 1_00103.png" />
+    <Content Include="Beetle\Comp 1_00104.png" />
+    <Content Include="Beetle\Comp 1_00105.png" />
+    <Content Include="Beetle\Comp 1_00106.png" />
+    <Content Include="Beetle\Comp 1_00107.png" />
+    <Content Include="Beetle\Comp 1_00108.png" />
+    <Content Include="Beetle\Comp 1_00109.png" />
+    <Content Include="Beetle\Comp 1_00110.png" />
+    <Content Include="Beetle\Comp 1_00111.png" />
+    <Content Include="Beetle\Comp 1_00112.png" />
+    <Content Include="Beetle\Comp 1_00113.png" />
+    <Content Include="Beetle\Comp 1_00114.png" />
+    <Content Include="Beetle\Comp 1_00115.png" />
+    <Content Include="Beetle\Comp 1_00116.png" />
+    <Content Include="Beetle\Comp 1_00117.png" />
+    <Content Include="Beetle\Comp 1_00118.png" />
+    <Content Include="Beetle\Comp 1_00119.png" />
+    <Content Include="Beetle\Comp 1_00120.png" />
+    <Content Include="Beetle\Comp 1_00121.png" />
+    <Content Include="Beetle\Comp 1_00122.png" />
+    <Content Include="Beetle\Comp 1_00123.png" />
+    <Content Include="Beetle\Comp 1_00124.png" />
+    <Content Include="Beetle\Comp 1_00125.png" />
+    <Content Include="Beetle\Comp 1_00126.png" />
+    <Content Include="Beetle\Comp 1_00127.png" />
+    <Content Include="Beetle\Comp 1_00128.png" />
+    <Content Include="Beetle\Comp 1_00129.png" />
+    <Content Include="Beetle\Comp 1_00130.png" />
+    <Content Include="Beetle\Comp 1_00131.png" />
+    <Content Include="Beetle\Comp 1_00132.png" />
+    <Content Include="Beetle\Comp 1_00133.png" />
+    <Content Include="Beetle\Comp 1_00134.png" />
+    <Content Include="Beetle\Comp 1_00135.png" />
+    <Content Include="Beetle\Comp 1_00136.png" />
+    <Content Include="Beetle\Comp 1_00137.png" />
+    <Content Include="Beetle\Comp 1_00138.png" />
+    <Content Include="Beetle\Comp 1_00139.png" />
+    <Content Include="Beetle\Comp 1_00140.png" />
+    <Content Include="Beetle\Comp 1_00141.png" />
+    <Content Include="Beetle\Comp 1_00142.png" />
+    <Content Include="Beetle\Comp 1_00143.png" />
+    <Content Include="Beetle\Comp 1_00144.png" />
+    <Content Include="Beetle\Comp 1_00145.png" />
+    <Content Include="Beetle\Comp 1_00146.png" />
+    <Content Include="Beetle\Comp 1_00147.png" />
+    <Content Include="Beetle\Comp 1_00148.png" />
+    <Content Include="Beetle\Comp 1_00149.png" />
+    <Content Include="Beetle\Comp 1_00150.png" />
+    <Content Include="Maps\second mockup.png" />
+    <Content Include="Towers\1.gif" />
+    <Content Include="Towers\animatedCircle.gif" />
+    <Content Include="Towers\Example.PNG" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
