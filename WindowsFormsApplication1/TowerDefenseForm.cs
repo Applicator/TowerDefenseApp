@@ -24,16 +24,19 @@ namespace TowerDefense
         private int gameBoardWidth = 0;
         private int towerPanelWidth = 0;
 
-        //private Timer timer;
+        private Timer timer;
+        private const int FRAMES_PER_SECOND = 30;
+
+        private Beetle beetle = new Beetle();
 
         public TowerDefenseForm()
         {
             InitializeComponent();
             simpleOpenGlControl1.InitializeContexts();
 
-            //timer = new Timer();
-            //timer.Tick += new EventHandler(timer_Tick);
-            //timer.Interval = 16;
+            timer = new Timer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = 1000 / FRAMES_PER_SECOND;
         }
 
         private void TowerDefenseForm_Paint(object sender, PaintEventArgs e)
@@ -79,26 +82,10 @@ namespace TowerDefense
             towerHeight = pBoxTower1.Size.Height;
         }
 
-        public void fillBeetleList()
-        {
-            //imageNumber = 0;
-            //while (imageNumber <= 150)
-            //{
-            //    string imageString = imageNumber.ToString();
-            //    string originalString = imageNumber.ToString();
-            //    for (int i = 4; i >= originalString.Length; i--)
-            //    {
-            //        imageString = "0" + imageString;
-            //    }
-            //    beetleImages.Add(Image.FromFile("C:\\Users\\Matt Johnson\\Documents\\Visual Studio 2010\\Projects\\TowerDefenseApplication\\WindowsFormsApplication1\\Beetle\\Comp 1_" + imageString + ".png"));
-            //    imageNumber++;
-            //}
-        }
-
         public PictureBox createTower1PictureBox(Point point)
         {
             PictureBox pBox = new PictureBox();
-            pBox.Image = Image.FromFile("C:\\Users\\Matt Johnson\\Documents\\Visual Studio 2010\\Projects\\TowerDefenseApplication\\WindowsFormsApplication1\\Beetle\\Comp 1_00000.png");
+            pBox.Image = Image.FromFile("C:\\Users\\Matt Johnson\\Documents\\Visual Studio 2010\\Projects\\TowerDefenseApplication\\WindowsFormsApplication1\\Beetle\\BeetleOpeningWings00000.png");
             pBox.Location = point;
             pBox.Size = new Size(towerPanelWidth / TowerSelectionPanel.TOWER_NUMBER_OF_COLUMNS, simpleOpenGlControl1.Height / 2 / TowerSelectionPanel.TOWER_NUMBER_OF_ROWS);
             pBox.SizeMode = PictureBoxSizeMode.StretchImage;
