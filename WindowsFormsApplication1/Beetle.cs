@@ -11,14 +11,14 @@ namespace TowerDefense
         public Beetle()
         {
             animation = new List<Image>();
+            animationPictureNumber = 178;
             fillBeetleList(animation);
-            animationSize = 177;
         }
 
         public void fillBeetleList(List<Image> emptyList)
         {
             int imageNumber = 0;
-            while (imageNumber <= animationSize)
+            while (imageNumber < animationPictureNumber)
             {
                 string imageString = imageNumber.ToString();
                 string originalString = imageNumber.ToString();

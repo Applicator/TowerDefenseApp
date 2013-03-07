@@ -48,7 +48,6 @@
             this.simpleOpenGlControl1.StencilBits = ((byte)(0));
             this.simpleOpenGlControl1.TabIndex = 0;
             this.simpleOpenGlControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.simpleOpenGlControl1_MouseClick);
-            this.simpleOpenGlControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.simpleOpenGlControl1_MouseMove);
             // 
             // TowerDefenseForm
             // 
@@ -59,7 +58,6 @@
             this.Name = "TowerDefenseForm";
             this.Text = "Tower Defense";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TowerDefenseForm_Paint);
-            this.Resize += new System.EventHandler(this.TowerDefenseForm_Resize);
             this.ResumeLayout(false);
 
         }
