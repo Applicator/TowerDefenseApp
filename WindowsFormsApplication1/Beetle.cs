@@ -26,7 +26,8 @@ namespace TowerDefense
                 {
                     imageString = "0" + imageString;
                 }
-                emptyList.Add(Image.FromFile("C:\\Users\\Matt Johnson\\Documents\\Visual Studio 2010\\Projects\\TowerDefenseApplication\\WindowsFormsApplication1\\Beetle\\BeetleOpeningWings" + imageString + ".png"));
+                //path should be relative
+                emptyList.Add(Image.FromFile(@"C:\Users\\Matt Johnson\Documents\Visual Studio 2010\Projects\TowerDefenseApplication\WindowsFormsApplication1\Beetle\BeetleOpeningWings" + imageString + ".png"));
                 imageNumber++;
             }
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TowerDefense.Towers
+namespace TowerDefense
 {
     public class BasicShootingTower : Tower
     {
