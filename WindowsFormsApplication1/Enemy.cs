@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace TowerDefense
 {
-    public abstract class Enemy
+    public abstract class Enemy : Animated
     {
         protected List<Image> animation;
         protected int animationPictureNumber;
@@ -14,11 +14,18 @@ namespace TowerDefense
         public const int ANIMATION_WIDTH = 100;
         public const int ANIMATION_HEIGHT = 100;
         protected int health;
+        protected Location location;
 
         public int Health
         {
             get { return health; }
             set { health = value; }
+        }
+
+        public Location EnemyLocation
+        {
+            get { return location; }
+            set { location = value; }
         }
 
         public int AnimationPictureNumber
@@ -37,10 +44,14 @@ namespace TowerDefense
             get { return animation; }
         }
 
-        public Enemy()
+        public Enemy(Location location)
         {
+            EnemyLocation = location;
             currentAnimationPicture = 0;
         }
 
+        public void draw()
+        {
+        }
     }
 }

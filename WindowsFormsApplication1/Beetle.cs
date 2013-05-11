@@ -8,7 +8,7 @@ namespace TowerDefense
 {
     class Beetle : Enemy
     {
-        public Beetle()
+        public Beetle(Location location) : base(location)
         {
             animation = new List<Image>();
             animationPictureNumber = 178;
@@ -30,6 +30,11 @@ namespace TowerDefense
                 emptyList.Add(Image.FromFile(@"C:\Users\\Matt Johnson\Documents\Visual Studio 2010\Projects\TowerDefenseApplication\WindowsFormsApplication1\Beetle\BeetleOpeningWings" + imageString + ".png"));
                 imageNumber++;
             }
+        }
+
+        public void draw()
+        {
+            GraphicsUtilities.drawUnitSquare(EnemyLocation.X, EnemyLocation.Y);
         }
     }
 }

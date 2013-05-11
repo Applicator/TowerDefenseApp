@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TowerDefense
 {
-    public class Tower
+    public abstract class Tower : Animated
     {
 
         protected const double ATTACK_POWER_MULTIPLIER = 0.5;
@@ -44,6 +44,10 @@ namespace TowerDefense
         public Tower(Location location)
         {
             TowerLocation = location;
+        }
+
+        public void draw()
+        {
         }
     }
 }

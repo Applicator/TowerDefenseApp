@@ -28,35 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.simpleOpenGlControl1 = new Tao.Platform.Windows.SimpleOpenGlControl();
             this.SuspendLayout();
             // 
-            // timer1
+            // simpleOpenGlControl1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.simpleOpenGlControl1.AccumBits = ((byte)(0));
+            this.simpleOpenGlControl1.AutoCheckErrors = false;
+            this.simpleOpenGlControl1.AutoFinish = false;
+            this.simpleOpenGlControl1.AutoMakeCurrent = true;
+            this.simpleOpenGlControl1.AutoSwapBuffers = true;
+            this.simpleOpenGlControl1.BackColor = System.Drawing.Color.Black;
+            this.simpleOpenGlControl1.ColorBits = ((byte)(32));
+            this.simpleOpenGlControl1.DepthBits = ((byte)(16));
+            this.simpleOpenGlControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.simpleOpenGlControl1.Location = new System.Drawing.Point(0, 0);
+            this.simpleOpenGlControl1.Name = "simpleOpenGlControl1";
+            this.simpleOpenGlControl1.Size = new System.Drawing.Size(1008, 730);
+            this.simpleOpenGlControl1.StencilBits = ((byte)(0));
+            this.simpleOpenGlControl1.TabIndex = 0;
+            this.simpleOpenGlControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.simpleOpenGlControl1_Paint);
             // 
             // TowerDefenseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this.simpleOpenGlControl1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TowerDefenseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tower Defense";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.TowerDefenseForm_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
+        private Tao.Platform.Windows.SimpleOpenGlControl simpleOpenGlControl1;
+
 
     }
 }

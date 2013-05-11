@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animated.cs" />
     <Compile Include="Beetle.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameBoard.cs" />
