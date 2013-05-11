@@ -64,6 +64,7 @@
     <Compile Include="GameBoard.cs" />
     <Compile Include="GraphicsUtilities.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="Path.cs" />
     <Compile Include="SquareArea.cs" />
     <Compile Include="Tower.cs" />
     <Compile Include="TowerDefenseForm.cs">
